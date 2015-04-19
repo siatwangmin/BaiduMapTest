@@ -95,16 +95,16 @@ namespace MapTest
          {
              Ping ping = new Ping();
 
-             //PingReply pingReply = ping.Send("180.149.131.33");
+             PingReply pingReply = ping.Send("180.149.131.33");
 
              //IPAddress ipAddress
-             PingReply pingReply = ping.Send("www.map.baidu.com");
+            // PingReply pingReply = ping.Send("www.map.baidu.com");
              if (pingReply.Status == IPStatus.Success)
              {
                  try
                  {
                     // /KeKe;component/Picture/图片1.png
-                    webView.Navigate(new Uri(System.Environment.CurrentDirectory + @"/../../ThirdParty/BMap.html", UriKind.RelativeOrAbsolute));
+                    webView.Navigate(new Uri(System.Environment.CurrentDirectory + @"/../../Source/BMap.html", UriKind.RelativeOrAbsolute));
                     //webView.Navigate(new Uri(@"../../ThirdParty/BMap.html", UriKind.RelativeOrAbsolute));
                  }
                  catch (Exception ex)
@@ -117,7 +117,9 @@ namespace MapTest
              {
                  try
                  {
-                     webView.Navigate("file:///E:\\examplemap.jpg");
+                     //webView.Navigate("file:///../../Source/examplemap.jpg");
+
+                     webView.Navigate(new Uri(System.Environment.CurrentDirectory + @"/../../Source/examplemap.jpg", UriKind.RelativeOrAbsolute));
 
                  }
                  catch (Exception ex)

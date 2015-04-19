@@ -95,7 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="HTMLPage1.html" />
-    <Content Include="ThirdParty\BMap.html" />
+    <Content Include="Source\BMap.html" />
+    <Resource Include="Source\examplemap.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

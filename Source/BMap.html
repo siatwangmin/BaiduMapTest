@@ -1,0 +1,56 @@
+﻿<html>
+<!-- saved from url=(0016)http://localhost -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html, #allmap {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=EsZOqpbcSGUO25qcrctdMb8P"></script>
+    <title>IP定位获取当前城市</title>
+</head>
+<body>
+    <div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(116.331398, 39.897445);
+    map.centerAndZoom(point, 12);
+
+    function myFun(result) {
+        var cityName = result.name;
+        map.setCenter(cityName);
+        alert("当前定位城市:" + cityName);
+    }
+    var myCity = new BMap.LocalCity();
+    myCity.get(myFun);
+
+
+    function test() {
+        var point2 = new BMap.Point(114.257719, 22.735579);
+        map.centerAndZoom(point2, 19);
+        map.enableScrollWheelZoom(true);
+    }
+
+    function test2(longtitude, latitude) {
+        var point3 = new BMap.Point(longtitude, latitude);
+        map.centerAndZoom(point3, 19);
+        var marker = new BMap.Marker(point3);  // 创建标注
+        map.addOverlay(marker);               // 将标注添加到地图中
+        marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+
+        map.enableScrollWheelZoom(false);
+    }
+
+    function ClearOverLayer() {
+        map.clearOverlays();
+    }
+</script>
