@@ -103,8 +103,9 @@ namespace MapTest
              {
                  try
                  {
-                     webView.Navigate(new Uri(System.Environment.CurrentDirectory + @"/BMap.html", UriKind.RelativeOrAbsolute));
-
+                    // /KeKe;component/Picture/图片1.png
+                    webView.Navigate(new Uri(System.Environment.CurrentDirectory + @"/../../ThirdParty/BMap.html", UriKind.RelativeOrAbsolute));
+                    //webView.Navigate(new Uri(@"../../ThirdParty/BMap.html", UriKind.RelativeOrAbsolute));
                  }
                  catch (Exception ex)
                  {

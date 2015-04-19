@@ -4,10 +4,10 @@
         Title="MainWindow" Height="382" Width="584" Name="MaptestWindow" >
     <Grid>
         <WebBrowser x:Name="webView" Margin="0,0,126,71" Loaded="webView_Loaded"/>
-        <Button x:Name="myButton" Content="Button" HorizontalAlignment="Left" Margin="501,35,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.2,-0.526" Click="myButton_Click"/>
-        <Button x:Name="btnTest2" Content="Button" HorizontalAlignment="Left" Margin="491,95,0,0" VerticalAlignment="Top" Width="75" Click="btnTest2_Click" />
-        <Button x:Name="btnTest3" Content="Button" HorizontalAlignment="Left" Margin="491,140,0,0" VerticalAlignment="Top" Width="75" Click="btnTest3_Click"/>
-        <Button x:Name="btnJpg" Content="LoadJpg" HorizontalAlignment="Left" Margin="491,190,0,0" VerticalAlignment="Top" Width="75" Click="btnJpg_Click"/>
+        <Button x:Name="btnSetPositioin" Content="SetPosition" HorizontalAlignment="Left" Margin="491,91,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.2,-0.526" Click="myButton_Click"/>
+        <Button x:Name="btnAddMark" Content="AddMark" HorizontalAlignment="Left" Margin="491,131,0,0" VerticalAlignment="Top" Width="75" Click="btnTest2_Click" />
+        <Button x:Name="btnClearMark" Content="ClearMark" HorizontalAlignment="Left" Margin="491,176,0,0" VerticalAlignment="Top" Width="75" Click="btnTest3_Click"/>
+        <Button x:Name="btnJpg" Content="LoadMap" HorizontalAlignment="Left" Margin="491,46,0,0" VerticalAlignment="Top" Width="75" Click="btnJpg_Click"/>
 
     </Grid>
 </Window>
