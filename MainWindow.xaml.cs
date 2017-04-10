@@ -31,19 +31,19 @@ namespace MapTest
             
         }
    
-        private void webView_Loaded(object sender, RoutedEventArgs e)
+        private void webBrowserMap_Loaded(object sender, RoutedEventArgs e)
         {
             
         }
 
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void mySetPosition_Click(object sender, RoutedEventArgs e)
         {
-            if (webView.IsLoaded)
+            if (webBrowserMap.IsLoaded)
             {
                 try
                 {
-                    this.webView.InvokeScript("test");
+                    this.webBrowserMap.InvokeScript("SetZhengzhongPosition");
                 }
                 catch (Exception ex)
                 {
@@ -55,13 +55,14 @@ namespace MapTest
             }
         }
 
-         private void btnTest2_Click(object sender, RoutedEventArgs e)
+         private void btnAddMark_Click(object sender, RoutedEventArgs e)
         {
-            if (webView.IsLoaded)
+            if (webBrowserMap.IsLoaded)
             {
                 try
                 {
-                    this.webView.InvokeScript("test2", new object[] { 114.25705, 22.734708 });
+                    object ret = this.webBrowserMap.InvokeScript("AddMark", new object[] { 114.25705, 22.734708 });
+                    MessageBox.Show(ret.ToString());
                 }
                 catch (Exception ex)
                 {
@@ -73,13 +74,13 @@ namespace MapTest
             }
         }
 
-         private void btnTest3_Click(object sender, RoutedEventArgs e)
+         private void btnClearMark_Click(object sender, RoutedEventArgs e)
          {
-             if (webView.IsLoaded)
+             if (webBrowserMap.IsLoaded)
              {
                  try
                  {
-                     this.webView.InvokeScript("ClearOverLayer");
+                     this.webBrowserMap.InvokeScript("ClearOverLayer");
                  }
                  catch (Exception ex)
                  {
@@ -91,7 +92,7 @@ namespace MapTest
              }
          }
 
-         private void btnJpg_Click(object sender, RoutedEventArgs e)
+         private void btnLoadMap_Click(object sender, RoutedEventArgs e)
          {
              Ping ping = new Ping();
 
@@ -104,8 +105,8 @@ namespace MapTest
                  try
                  {
                     // /KeKe;component/Picture/图片1.png
-                    webView.Navigate(new Uri(System.Environment.CurrentDirectory + @"/../../Source/BMap.html", UriKind.RelativeOrAbsolute));
-                    //webView.Navigate(new Uri(@"../../ThirdParty/BMap.html", UriKind.RelativeOrAbsolute));
+                    webBrowserMap.Navigate(new Uri(System.Environment.CurrentDirectory + @"/../../Source/BMap.html", UriKind.RelativeOrAbsolute));
+                    //webBrowserMap.Navigate(new Uri(@"../../ThirdParty/BMap.html", UriKind.RelativeOrAbsolute));
                  }
                  catch (Exception ex)
                  {
@@ -117,9 +118,9 @@ namespace MapTest
              {
                  try
                  {
-                     //webView.Navigate("file:///../../Source/examplemap.jpg");
+                     //webBrowserMap.Navigate("file:///../../Source/examplemap.jpg");
 
-                     webView.Navigate(new Uri(System.Environment.CurrentDirectory + @"/../../Source/examplemap.jpg", UriKind.RelativeOrAbsolute));
+                     webBrowserMap.Navigate(new Uri(System.Environment.CurrentDirectory + @"/../../Source/examplemap.jpg", UriKind.RelativeOrAbsolute));
 
                  }
                  catch (Exception ex)

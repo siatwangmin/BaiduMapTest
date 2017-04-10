@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="382" Width="584" Name="MaptestWindow" >
     <Grid>
-        <WebBrowser x:Name="webView" Margin="0,0,126,71" Loaded="webView_Loaded"/>
-        <Button x:Name="btnSetPositioin" Content="SetPosition" HorizontalAlignment="Left" Margin="491,91,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.2,-0.526" Click="myButton_Click"/>
-        <Button x:Name="btnAddMark" Content="AddMark" HorizontalAlignment="Left" Margin="491,131,0,0" VerticalAlignment="Top" Width="75" Click="btnTest2_Click" />
-        <Button x:Name="btnClearMark" Content="ClearMark" HorizontalAlignment="Left" Margin="491,176,0,0" VerticalAlignment="Top" Width="75" Click="btnTest3_Click"/>
-        <Button x:Name="btnJpg" Content="LoadMap" HorizontalAlignment="Left" Margin="491,46,0,0" VerticalAlignment="Top" Width="75" Click="btnJpg_Click"/>
+        
+        <WebBrowser x:Name="webBrowserMap" Margin="0,0,126,71" Loaded="webBrowserMap_Loaded"/>
+        <Button x:Name="btnSetPositioin" Content="SetPosition" HorizontalAlignment="Left" Margin="491,91,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.2,-0.526" Click="mySetPosition_Click"/>
+        <Button x:Name="btnAddMark" Content="AddMark" HorizontalAlignment="Left" Margin="491,131,0,0" VerticalAlignment="Top" Width="75" Click="btnAddMark_Click" />
+        <Button x:Name="btnClearMark" Content="ClearMark" HorizontalAlignment="Left" Margin="491,176,0,0" VerticalAlignment="Top" Width="75" Click="btnClearMark_Click"/>
+        <Button x:Name="btnLoadMap" Content="LoadMap" HorizontalAlignment="Left" Margin="491,46,0,0" VerticalAlignment="Top" Width="75" Click="btnLoadMap_Click"/>
 
     </Grid>
 </Window>
